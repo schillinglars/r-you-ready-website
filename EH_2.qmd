@@ -1,0 +1,760 @@
+---
+title: "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 2"
+author: Sandra Grinschgl, Aaron Friedli, Lars Schilling
+format: 
+  revealjs:
+    title-slide-attributes:
+      data-visibility: hidden
+    theme: [default, ./custom.scss]
+    transition: slide
+    slide-number: true
+    logo: presentation_files/eh1/unibe.png
+    incremental: false
+    self_contained: true
+    show-slide-number: all
+    smaller: true
+    progress: true
+    controls: true
+    embed-resources: true
+---
+
+## R u Ready? Reprodzierbare Datenaufbereitung und -analyse mit R
+
+HS 2025<br><br><br> **LV-Leitung**: Dr. Sandra Grinschgl / MSc. Aaron Friedli<br> **Tutor**: BSc. Lars Schilling<br><br><br>**2. Einheit**, 24.09.2025
+
+------------------------------------------------------------------------
+
+## Semesterplan
+
+![](images/Semesterplan_1.png){fig-align="center"}
+
+::: notes
+Gibt es Fragen, die sich nach letzter Woche aufgetan haben?
+:::
+
+------------------------------------------------------------------------
+
+## Ergebnisse der Bedarfsanalyse (1)
+
+**10:15 (*N* = 24)**
+
+***Wie würdest du aktuell deine R-Kenntnisse einschätzen?***
+
+![](images/EH_2_files/Bedarfsanalyse/R_Lenntnisse_1015.png){fig-align="left" width="600"}
+
+**16:15 (*N* = 23)**
+
+***Wie würdest du aktuell deine R-Kenntnisse einschätzen?***
+
+![](images/EH_2_files/Bedarfsanalyse/Screenshot%202025-09-22%20104127.png){width="600"}
+
+------------------------------------------------------------------------
+
+## Ergebnisse der Bedarfsanalyse (2)
+
+***Wie oft hast du R schon verwendet?***
+
+**10:15**
+
+![](images/EH_2_files/Bedarfsanalyse/Verwendung_1015.png)
+
+------------------------------------------------------------------------
+
+***Wie oft hast du R schon verwendet?***
+
+**16:15**
+
+![](images/EH_2_files/Bedarfsanalyse/Verwendung1615.png)
+
+::: notes
+Hinweis auf Ian's Reproducible Data Analyses Seminar –\> Mo 16:15; wenn dann diese Woche wechseln
+:::
+
+------------------------------------------------------------------------
+
+## Ergebnisse der Bedarfsanalyse (3)
+
+**In welchen Lehrveranstaltungen hast du R verwendet?**
+
+-   Statistik
+
+-   Diagnostik
+
+-   Neuowissenschaften/Computerlab
+
+-   Bachelorarbeit/Masterarbeit
+
+-   Weitere Kurse und Seminar ( z.B. Datensatzaufbereitung in R)
+
+------------------------------------------------------------------------
+
+## Ergebnisse der Bedarfsanalyse (4)
+
+**Hast du R auch außerhalb von Lehrveranstaltungen verwendet?**
+
+**10:15**
+
+![](images/EH_2_files/Bedarfsanalyse/Verwendung_ausserhalb_1015.png)
+
+------------------------------------------------------------------------
+
+**Hast du R auch außerhalb von Lehrveranstaltungen verwendet?**
+
+**16:15**
+
+![](images/EH_2_files/Bedarfsanalyse/Verwendung_ausserhalb_1615.png)
+
+------------------------------------------------------------------------
+
+## Ergebnisse der Bedarfsanalyse (5)
+
+**Welche R-Pakete hast du bereits verwendet?**
+
+-   Fast alle von euch haben schon mit dem Tidyverse gearbeitet
+
+::: notes
+Fast alle nur mit tidyverse, fast niemand mit BaseR und fast niemand mit einem anderen Package.
+:::
+
+------------------------------------------------------------------------
+
+## Ergebnisse der Bedarfsanalyse (6)
+
+**Wie unsicher fühlst du dich im Umgang mit den folgenden Themen?**
+
+**10:15**
+
+![](images/EH_2_files/Bedarfsanalyse/unsicherheiten_1015.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+**Wie unsicher fühlst du dich im Umgang mit den folgenden Themen?**
+
+**16:15**
+
+![](images/EH_2_files/Bedarfsanalyse/unsicheheiten_1615.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+## Ergebnisse der Bedarfsanalyse (7)
+
+**Welche weiteren Schritte bereiten dir Schwierigkeiten in R?**
+
+-   Allgemeine Unsicherheit / Überforderung
+
+-   Grundlegendes, Syntax & Fehleranalyse (Code funktioniert nicht)
+
+-   Pakete und Funktionen (Wann brauche ich was?)
+
+-   Codes schreiben und verstehen (Eigenständig coden, nachvollziehen von generiertem Code)
+
+-   Datenverständnis & -aufbereitung
+
+-   Statistische Analysen & Anwendungen
+
+-   Ganzheitliches Verständnis von Code
+
+::: notes
+Unsicherheit welche Pakete für welche Analysen
+
+Oft nur codes kopieren, mühe logik oder reihenfolge nachzuvollziehen
+
+Unsicherheit welche schritte nötig sind, (umwandenlen und strukturieren von daten)
+
+Auswahl passender Tests
+
+--\> Allgemeine Überforderung, stark auf extrene Hilfe angewiesen.
+:::
+
+------------------------------------------------------------------------
+
+## Ergebnisse der Bedarfsanalyse (8)
+
+Bei welchen Schritten in R **fühlst du dich sicher**, wenn du auch daran denkst, die im Bachelor erworbenen Unterlagen zu Hilfe zu ziehen?
+
+-   Basics (z.B. Vektoren zuweisen)
+
+-   Datenimport & -aufbereitung
+
+-   Deskriptive & einfache Analysen
+
+-   Visualisierung mit ggplot2
+
+-   Fortgeschrittene Analysen mit bereits vorbereiteten Daten
+
+-   Allgemeine Unsicherheit ➡️ mit Unterlagen, KI, oder Schritt für Schritt Anweisungen funktioniert bereits einiges
+
+::: notes
+Wir werden versuchen unser "Programm" auf eure Needs abzustimmen - bitte gebt uns laufend Feedback dazu.
+:::
+
+------------------------------------------------------------------------
+
+## Ergebnisse der Bedarfsanalyse (9)
+
+**Was würdest du gerne in diesem Methodenseminar lernen?**
+
+-   Grundlagen und Verständnis festigen ➡️ Sicherheit gewinnen
+
+-   Datenaufbereitung
+
+-   Statistische Analysen und Interpretation
+
+    -   Wann brauche ich welche Tests ➡️ Leider kann keine grundlegende Statistik-Auffrischung angeboten werden.
+
+    -   Aber: Strukturiertes Vorgehen z.B. Datenanalyseplan.
+
+-   Visualisierung und Dokumentation
+
+-   Eigenständiger werden & Problemlöseskills
+
+-   Motivation und Sicherheit!
+
+    ::: notes
+    Unser Motto: Üben, üben, üben
+    :::
+
+------------------------------------------------------------------------
+
+## Ergebnisse der Bedarfsanalyse (10)
+
+**Welche Unterstützung um die Datenaufbereitung und -analyse in R würdest du dir innerhalb dieses Seminars wünschen?**
+
+-   offene Fehlerkultur
+
+-   Schritt-für-Schritt-Anleitungen im individuellen Tempo → **Musterlösungen**
+
+-   Üben und Praxis ➡️ **Hands-on!**
+
+<!-- -->
+
+-   Niederschwellige Hilfe ➡️ **Tutor, Sprechstunden**
+
+<!-- -->
+
+-   Verknüpfung von „Warum“ und „Wie“ ➡️ **konzeptionelle und praktische Kompetenz**
+
+------------------------------------------------------------------------
+
+## Ergebnisse der Bedarfsanalyse (11)
+
+Welche Unterstützung um die Datenaufbereitung und -analyse in R würdest du dir außerhalb dieses Seminars (z.B. im Studium allgemein) wünschen?
+
+-   Anlaufstellen & Beratung ➡️ Methodenberatung, Foren für Mitstudierende
+
+-   Skripte & Materialien ➡️ Frei Zugängliche Skripte, Templates, Cheat-Sheets
+
+-   Kurse & Übungsangebote ➡️ Zusätzliche Kurse für Auffrischung und Übung
+
+-   Praxis & Anwendung im Studium ➡️ R stärker in VLs und Seminare & Projekte einbinden um Routine zu entwicklen
+
+-   Theorie-Verknüpfung & Verständnis
+
+    ::: notes
+    Diese Frage stellen wir, weil wir bemüht sind etwas zu verbessern. 1ster Schritt: Methodenberatung
+    :::
+
+------------------------------------------------------------------------
+
+## Peer-Pairing:
+
+**10:15**
+
+![](images/clipboard-1580035438.png){width="350"}
+
+**16:15**
+
+![](images/clipboard-2537862902.png){width="350"}
+
+------------------------------------------------------------------------
+
+## Peer-Pairing:
+
+-   Vorgehen: Melden bis **Sonntag 28.09** **(ILIAS Forum**, siehe EH2) mit Namen des 2er Teams
+
+-   Ansonsten: Zufällige Zuteilung am Montag - Kennenlernen in der nächsten Einheit
+
+[![Illustration von Freepik](images/EH_2_files/teamwork.jpg){fig-align="center"}](https://img.freepik.com/vektoren-kostenlos/partner-die-grosse-puzzleteile-halten_74855-5278.jpg)
+
+------------------------------------------------------------------------
+
+## Open Science - Menti
+
+![](images/Menti.png){fig-align="center" width="403"}
+
+::: notes
+Was verbindest du mit Open Science?
+
+Menti nach Vormittagseinheit zurücksetzen
+:::
+
+------------------------------------------------------------------------
+
+## Replikationskrise
+
+-   Ausgangspunkt: 9 Studien, die darauf hinweisen, dass Personen «in die Zukunft sehen können» (Bem , 2011)
+
+-   Etablierte psychologische Messmethoden (z.B. Priming)
+
+-   Ein Ergebnis: Primes, die nach Antwort präsentiert werden, beeinflussen Antwortzeiten
+
+-   Starke Kritik, v.a. was Methodik betrifft; gerade kontroverse,„unwahrscheinliche“ Hypothesen sollten durch strikte, konfirmatorische Analysen überprüfen (Francis, 2012; LeBel & Peters, 2011; Wagenmakers et al., 2011)
+
+-   Diverse gescheiterte Replikationsversuche (Galak et al., 2012; Ritchie et al., 2012; Robinson, 2011)
+
+::: notes
+Weitere studien von bem unter anderem: erotic image detection –\> teilnehmende errieten die position von erotischen bildern signifikant öfter hinter einem vorhang - bevor die bilder überhaupt positioniert wurden.
+:::
+
+------------------------------------------------------------------------
+
+## Replizierbarkeit und Reproduzierbarkeit
+
+![Schönbrodt, 2023](images/EH_2_files/reproducibility.png){fig-align="center"}
+
+::: notes
+-   Auf deutsch: Reproduzierbarkeit = gleiche Daten, gleiche Analyse, gleiche Ergebnisse.
+
+-   Replizierbarkeit = neue Daten, gleiche Methode, ähnliche Ergebnisse.
+
+--\> Aufgrund von Bem haben sich Forschende das Ziel gesetzt die Replizierbarkeit von etablierten findings zu prüfen.
+:::
+
+------------------------------------------------------------------------
+
+## Open Science Collaboration (2015)
+
+Gemeinsames Projekt von 270 Autor:innen, mit dem Ziel 100 Studien aus drei verschiedenen Journals zu replizieren.
+
+![](images/EH_2_files/repli_1.png){fig-align="center" width="400"}
+
+------------------------------------------------------------------------
+
+## Open Science Collaboration (2015)
+
+-   ::: {style="color: green"}
+    Signifikante Ergebnisse in den Original-Studien: **97%**
+    :::
+
+-   Wie viele % der Effekte liessen sich replizieren - was glaubt ihr?
+
+![](images/EH_2_files/repli_2.png){fig-align="center" width="400"}
+
+------------------------------------------------------------------------
+
+## Open Science Collaboration (2015)
+
+:::: incremental
+::: {style="color:red"}
+-   Signifikante Ergebnisse in den Replikationsstudien: **36%**
+-   Die Effektgrössen in den Replikationsstudien sind im Schnitt halb so gross!
+
+![](images/EH_2_files/repli_3.png){fig-align="center" width="400"}
+:::
+::::
+
+------------------------------------------------------------------------
+
+## Replikationskrise in anderen Fächern
+
+![Schönbrodt, 2023; Hofer, 2024](images/EH_2_files/repli_4.png){fig-align="center"}
+
+\*Bei Wirtschaft geht es um Reproduzierbarkeit.
+
+Siehe auch: <https://www.youtube.com/watch?v=FpCrY7x5nEE&ab_channel=TED-Ed>
+
+------------------------------------------------------------------------
+
+## Warum?
+
+::: notes
+Sammlung im Plenum von möglichen Gründen
+:::
+
+------------------------------------------------------------------------
+
+## Gründe für die Replikationskrise:
+
+-   **Akademisches Umfeld:**
+
+    -   Quantität \> Qualität
+
+    -   "publish or perish"
+
+-   **Questionable Research Practices:**
+
+    -   Selektive Berichterstattung
+
+    -   *p*-hacking
+
+-   **Biases:**
+
+    -   Confirmation Bias
+
+    -   Publication Bias
+
+"If you torture data long enough, it will confess to anything" - Ronald Coase
+
+(Spielt natürlich auch eine Rolle: Versuchsmethoden und Zufallsbefunde)
+
+------------------------------------------------------------------------
+
+## Gründe für die Replikationskrise:
+
+Chambers, C. (2017). The seven deadly sins of psychology: A manifesto for reforming the culture of scientific practice. Princeton University Press. <https://doi.org/10.1515/9781400884940>
+
+------------------------------------------------------------------------
+
+## Aktuelle Fälle:
+
+[**Top German psychologist fabricated data, investigation finds**](https://www.science.org/content/article/top-german-psychologist-fabricated-data-investigation-finds)
+
+-   Der bekannte Psychologe Hans-Ulrich Wittchen soll in einer millionenschweren Studie Daten gefälscht und Whistleblower unter Druck gesetzt haben, was nun zu strafrechtlichen Ermittlungen und möglichen Sanktionen führt.
+
+[**“Here’s the Unsealed Report Showing How Harvard Concluded That a Dishonesty Expert Committed Misconduct”**](https://statmodeling.stat.columbia.edu/2024/03/14/heres-the-unsealed-report-showing-how-harvard-concluded-that-a-dishonesty-expert-committed-misconduct/)
+
+-   Die Forscherin Francesca Gino wird beschuldigt, Daten in mehreren Studien manipuliert zu haben, bestreitet jedoch die Vorwürfe und führt sie auf mögliche Fehler oder andere Personen zurück.
+
+[**A Scandal in Alzheimer’s Research Shows How Science Can Go Astray**](https://www.chronicle.com/article/a-scandal-in-alzheimers-research-shows-how-science-can-go-astray)
+
+-   Eine Untersuchung legt nahe, dass eine einflussreicher Alzheimer-Studie von 2006 manipulierte Bilder enthielt, was Zweifel an jahrelanger Forschung und der wissenschaftlichen Integrität aufwirft.
+
+::: notes
+Aktueller Stand:
+
+Hans-Ulrich Wittchen Er ist wegen Datenfälschung bei einer großen Studie angeklagt; sein Vertrag an der LMU wurde suspendiert, weitere Ermittlungen laufen.
+
+Francesca Gino Harvard entließ sie 2025 und entzog ihr die Tenure wegen nachgewiesenem Forschungs­fehlverhalten; ihre Klagen gegen Harvard laufen, Teile davon wurden bereits abgewiesen.
+
+Sylvain Lesné Sein zentraler Alzheimer-Artikel von 2006 wurde 2024 aus Nature zurückgezogen; er trat 2025 von seiner Professur in Minnesota zurück, Untersuchungen dauern an. Seine Forschung beinflusste grosse teile des Forschungsbereiches und ist eines der meistzitierten Papers die bis heute retracted wurden.
+:::
+
+------------------------------------------------------------------------
+
+## Retraction Watch Leaderboard
+
+![](images/EH_2_files/aktuelle_4.png){fig-align="center"}
+
+::: notes
+An Stelle 8 ist Diederik Stapel - bekannter Fall aus der Psychologie
+:::
+
+------------------------------------------------------------------------
+
+## THE END IS NEAR
+
+![Bild generiert von ChatGPT Image Generator](images/EH_2_files/the_end_is_near.png){width="450"}
+
+::: incremental
+-   **Oder?**
+
+-   *„Science is never perfect, but what this crisis has shown is that there is never a shortage of scientists who will keep trying to make it better.”* (Maki Naro)
+:::
+
+------------------------------------------------------------------------
+
+## Lösungsansätze - Open Science
+
+![](images/EH_2_files/lösungsansätze.png){fig-align="center"}
+
+Auch wichtig: Registered Reports und Replikationsstudien; Open Acces Publikationen, Open Peer Review, Educational Practices
+
+------------------------------------------------------------------------
+
+## Lösungsansätze - Open Science (2)
+
+-   Präregistrierung
+
+    -   Festlegung der zentralen Aspekte der Studie (z.B. Hypothesen, Stichprobe, Analyse) vor ihrer Umsetzung (d.h. **vor der Datenerhebung**)
+
+    -   ::: {style="color:red"}
+        Auch möglich **vor der Datenanalyse** —\> Datenanalyseplan
+        :::
+
+    -   Präregistrierung wird veröffentlicht, erhält einen Zeitstempel und ist schreibgeschützt
+
+        -   www.osf.io
+        -   [Verschiedene Templates](https://help.osf.io/article/229-select-a-registration-template)
+
+-   Preprints:
+
+    -   Version des Manuskripts vor Peer-Review
+
+    -   Postprint: Version des Manuskripts nach Peer Review.
+
+        ![](images/EH_2_files/psycarchx.png){width="200"}
+
+------------------------------------------------------------------------
+
+## Lösungsansätze - Open Science (2)
+
+Open Material, Data & Code
+
+-   **Open Material:** Untersuchungsmaterial (Fragebogen, Stimuli, usw.) wird online zur Verfügung gestellt
+
+-   **Open Data:** Daten werden in **anonymisierter** Form veröffentlicht
+
+-   **Open Code:** Reproduzierbare Analyseskripte werden zur Verfügung gestellt
+
+Badges: [![](images/EH_2_files/badges.jpg){width="320"}](www.osf.io)
+
+::: {style="color: red"}
+Erlaubt Ergebnisse zu überprüfen; erhöht die Glaubwürdigkeit an Forschung; stärkt die gefundenen Ergebnisse
+:::
+
+------------------------------------------------------------------------
+
+## Open Science = Gute wissenschaftliche Praxis
+
+![Stefan et al. (2023)](images/EH_2_files/researchpractices.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+## Weitere Ressourcen:
+
+-   Pennington, C. R. (2023). A student’s guide to open science: Using the replication crisis to reform psychology. McGraw Hill​.
+
+-   Open Science an der Universität Bern: <https://www.ub.unibe.ch/service/open_science/index_ger.html> ​
+
+-   Blogs über aktuelle Themen: <https://datacolada.org>
+
+-   Journal Club: <https://reproducibilitea.org>
+
+-   Comic: <https://thenib.com/repeat-after-me/?utm_campaign=web-share-links&utm_medium=social&utm_source=link>
+
+-   Lehrveranstaltungen der Abteilung „Psychologie der Digitalisierung“- Meta-Wissenschaft <https://www.dig.psy.unibe.ch/studium/lehrveranstaltungen/index_ger.html>
+
+    ![](images/CrisesClass.png){width="316"}
+
+-   „Spellchecker“ für Statistik <https://michelenuijten.shinyapps.io/statcheck-web/>
+
+    ::: notes
+    Freie Plätze in Ian's Seminar - Teilnahme noch möglich!
+    :::
+
+------------------------------------------------------------------------
+
+## Was bedeutet dies nun für uns?
+
+-   Festhalten der Analysen in Datenanalyseplänen
+
+-   Analyse reproduzierbar gestalten ➡️ durch Kommentierung von Code, Codebook etc.
+
+-   Idealerweise: auch bei der Masterarbeit Präregistrierung oder Datenanalyseplan etc. (Unterstützung dafür bietet auch die Methodensprechstunde bei Aaron)
+
+-   Regt eure Betreuer:innen an!
+
+![](images/EH_2_files/open%20science.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+## Präregistrierung/Datenanalysepläne
+
+-   Vorteile, u.a.:
+
+    -   kann davor festhalten, was ich erwarte und wie ich es analysiere = erhöhte Transparenz
+
+    -   verringerte Möglichkeiten von p-hacking, HARKing, und Biases Stichprobengröße wird festgeschrieben und muss begründet werden
+
+    -   Unterscheidung konfirmatorischer und explorativer Forschung
+
+        -   konfirmatorisch: Eine vorab festgelegte Theorie & Hypothese testen
+
+        -   explorativ: neue Zusammenhänge/Unterschiede entdecken; keine Annahmen vorab
+
+    **"Its a plan, not a prison" (Pennington, 2023)**
+
+------------------------------------------------------------------------
+
+### Konzeptionelle Kompetenz: Was muss ich bei der Datenaufbereitung tun, Warum muss ich dies tun
+
+-   **Welche Hypothesen möchte ich testen?**
+
+-   Stichprobe (inkl. Poweranalyse)
+-   Berechnung der abhängigen Variablen
+-   Datenausschluss
+-   Umgang mit fehlenden Daten, Umgang mit Ausreißern
+
+-   **Wie (d.h. mit welchem statistischen Modell) teste ich meine Hypothesen?**\
+    Welche **Voraussetzungen** sind dabei zu beachten und wie gehe ich bei Verletzungen dieser vor?\
+    Welche **Inferenz-Kriterien** ziehe ich heran?
+
+-   ➡️ Verringerung der "Researcher Degrees of Freedom"
+
+-   ➡️ Wichtig für alle empirischen Arbeiten! Wenn man diese Punkte vor der Datenerhebung gut durchdenkt, spart man sich bei der Analyse viel Aufwand.
+
+-   ➡️Greift auf eure Statistik-Kenntnisse und die Unterlagen aus dem Bachelor zurück!
+
+------------------------------------------------------------------------
+
+## Präregistrierung/Datenanalysepläne
+
+**Nachteile?**
+
+::: notes
+-   Keine Garantie für Qualität
+
+-   Ist auch "hackable" –\> PARKing (Preregisitreing after Results are known)
+:::
+
+------------------------------------------------------------------------
+
+## Grundlegender Artikel: Grinschgl et al. (2020)
+
+***From metacognitive beliefs to strategy selection: does fake performance feedback influence cognitive offloading?***
+
+-   3 Gruppen und mehrere Messzeitpunkte
+
+-   between-within Design
+
+-   Hauptanalysen: ANOVAs und t-Tests
+
+-   Verschiedene AVs (z.B. cognitive offloading, Arbeitsgedächtnisfähigkeiten, Selbsteinschätzung)
+
+-   Präregistriert auf OSF <https://osf.io/9hpz5>
+
+    -   ::: {style="color: red"}
+        ACHTUNG: Kein optimales Beispiel, an manchen Stellen zu knapp!
+        :::
+
+------------------------------------------------------------------------
+
+## Datenanalyseplan
+
+-   Secondary Data Analyses Preregistration (<https://osf.io/x4gzt/>[)](https://help.osf.io/article/229-select-a-registration-template)){.uri}
+
+-   Basierend auf Van den Akker et al. (2021) -\> siehe Paper für eine Anleitung & Youtube Video <https://www.youtube.com/watch?v=fqvJx2_V3zY>
+
+-   Leichte Modifikationen für unser Seminar Vorlage auf ILIAS unter «Abschlussprojekt» -\> ZIP-Ordner
+
+------------------------------------------------------------------------
+
+## Datenanalyseplan - (Modifizierte) Fragen
+
+-   Titel
+-   Kurzbeschreibung der Studie
+-   Forschungsfragen
+-   Hypothesen & explorative Fragestellungen
+-   Datenzugang
+-   Datenerhebung
+-   Unabhängige Variablen
+-   Abhängige Variablen
+-   Fehlende Daten
+-   Datenausschluss
+-   Vorkenntnisse zu den Daten
+-   Statistische Modelle
+-   Inferenz-Kriterien
+
+**Diese Fragen sind für die Analysen von Grinschgl et al, (2020) zu beantworten –\> erste HÜ**
+
+------------------------------------------------------------------------
+
+## Datenanalyseplan - Aufgabenstellung
+
+-   Datenanalyseplan für Reproduzierung der Analysen von Grinschgl et al. (2020) erstellen (bis EH 4) ➡️4 Punkte
+
+    -   Paper befindet sich ohne und mit Hinweisen auf ILIAS (Ordner «Abschlussprojekt» ➡️ Zip Ordner)
+
+    -   Auf Deutsch oder Englisch
+
+    -   Nicht nur Kopie der Textteile aus dem Paper, sondern in eigene Worte fassen
+
+    -   Es gibt nicht die EINE richtige Lösung
+
+    -   Einfach mal probieren! Korrektheit zweitrangig!
+
+-   Musterlösung & Peer-Review (Zwischen EH 4-5) ➡️ 4 Punkte
+
+-   Abschlussarbeit: überarbeiteten Datenanalyseplan mit abgeben (Basis: Simulierte Daten) ➡️ Teil der 46 Punkte (Abschlussarbeit)
+
+-   FAQ anschauen, Ilias Forum für neue Fragen nutzen
+
+------------------------------------------------------------------------
+
+## Fragen, Wünsche, Anregungen
+
+![Illustration von svstudioart/Freepik](images/EH_2_files/fragen.png){fig-align="center" width="345"}
+
+------------------------------------------------------------------------
+
+## **Ankündigung: Collegium Generale**
+
+![](images/Collegium_Generale.png)
+
+------------------------------------------------------------------------
+
+## Ankündigung: Masterarbeit / Praktikum zu vergeben
+
+![](images/Loftus.jpg){fig-alt="https://commons.wikimedia.org/wiki/File:Car_Crash_7-1-18_2245_%2842450608354%29.jpg" fig-align="center" width="319"}
+
+Replikationsstudie von [Loftus und Palmer](https://www.simplypsychology.org/loftus-palmer.html)(1974) Car Crash Experiment
+
+Loftus, E. F., & Palmer, J. C. (1974). [Reconstruction of auto-mobile destruction](http://www.hss.caltech.edu/courses/2004-05/winter/psy130/LoftusPalmer.pdf): An example of the interaction between language and memory. *Journal of Verbal Learning and Verbal behavior*, 13, 585-589.
+
+------------------------------------------------------------------------
+
+## **Heute haben wir:**
+
+-   Den Ursprung und Gründe der Replikationskrise kennengelernt
+
+-   Das Verbessern psychologischer Forschung mittels Open Science Praktiken diskutiert
+
+-   Das Konzept der Präregistrierung und des Datenanalyseplans kennengelernt
+
+-   Weitere Hands-On Übungen zu R Basics bearbeitet
+
+------------------------------------------------------------------------
+
+## Hausübungen:
+
+-   Paper lesen (r_you_ready/Grinschgl2020/reports)
+-   Datenanalyseplan für Paper erstellen (auf Basis des Papers)
+    -   Abgabe via ILIAS, **Deadline: 08.10.2025**
+    -   Weiterleiten an Peer-Partner (EH4)
+-   Unterstützende Dokumente (Ordner: r_you_ready/Unterstützende_Dokumente/Datenanalyseplan):
+    -   Artikel Van den Akker et al. (2021)
+    -   Forum & Peer Pairing (ab EH3)
+    -   FAQ
+    -   Fragen zur nächsten Einheit mitbringen
+-   Hands-On Übungen (Musterlösungen nächste Woche)
+-   Peer-Pairings melden, **Deadline 28.09.2025**
+
+::: notes
+Oder direkt jetzt bei mir oder lars melden!
+:::
+
+------------------------------------------------------------------------
+
+## Referenzen:
+
+Bem, D. J. (2011). Feeling the future: Experimental evidence for anomalous retroactive influences on cognition and affect. *Journal of Personality and Social Psychology, 100*, 407–425. <https://doi.org/10.1037/a0021524>
+
+Francis, G. (2012). Too good to be true: Publication bias in two prominent studies from experimental psychology. *Psychonomic Bulletin & Review, 19*, 151–156. <https://doi.org/10.3758/s13423-012-0227-9>
+
+Galak, J., LeBoeuf, R. A., Nelson, L. D., & Simmons, J. P. (2012). Correcting the past: Failures to replicate psi. *Journal of Personality and Social Psychology, 103*(6), 933–948. <http://dx.doi.org/10.1037/a0029709>
+
+Grinschgl, S., Meyerhoff, H. S., Schwan, S., & Papenmeier, F. (2021). From metacognitive beliefs to strategy selection: Does fake performance feedback influence cognitive offloading? *Psychological Research, 85*, 2654–2666. <https://doi.org/10.1007/s00426-020-01435-9>
+
+Hofer, G. (2024, April 23). *Open Science* \[Course presentation\]. University of Graz.
+
+LeBel, E. P., & Peters, K. R. (2011). Fearing the future of empirical psychology: Bem’s (2011) evidence of psi as a case study of deficiencies in modal research practice. *Review of General Psychology, 15*(4), 371–379. <https://doi.org/10.1037/a0025172>
+
+Open Science Collaboration. (2015). Estimating the reproducibility of psychological science. *Science, 349*(6251), Article aac4716. <https://doi.org/10.1126/science.aac4716>
+
+Pennington, C. R. (2023). *A student’s guide to open science: Using the replication crisis to reform psychology*. McGraw Hill.
+
+------------------------------------------------------------------------
+
+Ritchie, S. J., Wiseman, R., & French, C. C. (2012). Failing the future: Three unsuccessful attempts to replicate Bem’s ‘Retroactive Facilitation of Recall’ effect. *PloS One, 7*(3), Article e33423. <https://doi.org/10.1371/journal.pone.0033423>
+
+Robinson, E. (2011). Not feeling the future: A failed replication of retroactive facilitation of memory recall. *Journal of the Society for Psychical Research, 75*, 142–147.
+
+Schönbrodt, F. (2023). *Open Science: An overview and first easy steps*. <https://osf.io/nf2rg>
+
+Stefan, A. M., Schönbrodt, F., & Schiestel, L. (2023). *An introduction to Open Science*. <https://osf.io/vza25>
+
+Wagenmakers, E.-J., Wetzels, R., Borsboom, D., & van der Maas, H. L. J. (2011). Why psychologists must change the way they analyze their data: The case of psi: Comment on Bem (2011). *Journal of Personality and Social Psychology, 100*(3), 426–432. <https://doi.org/10.1037/a0022790>
+
+Van Den Akker, O. R., Weston, S., Campbell, L., Chopik, B., Damian, R., Davis-Kean, P., Hall, A., Kosie, J., Kruse, E., Olsen, J., Ritchie, S., Valentine, K., Van ’T Veer, A., & Bakker, M. (2021). Preregistration of secondary data analysis: A template and tutorial. *Meta-Psychology, 5*. <https://doi.org/10.15626/MP.2020.2625>
+
+------------------------------------------------------------------------

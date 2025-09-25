@@ -1,0 +1,294 @@
+---
+title: "Hands On 1"
+---
+
+# Hands On - Codings Basics (Einheiten 1 und 2)
+
+Bei Bedarf finden sich hier nochmal die Slides zur EH1: <iframe src="EH_1.html" width="100%" height="500px"></iframe>
+
+Und EH2
+
+<iframe src="EH_2.html" width="100%" height="500px">
+
+</iframe>
+
+## Installation R und R-Studio
+
+Installiere R und RStudio:
+
+1.  Installation von R – neueste Version 4.5.1: <https://stat.ethz.ch/CRAN/>
+
+2.  Installation von RStudio (Version 2025.09.0): <https://posit.co/download/rstudio-desktop/>
+
+Du weisst nicht was mit R auf sich hat? Hier ist eine Kurzerklärung: <https://methodenlehre.github.io/einfuehrung-in-R/>
+
+## Einstellungen
+
+1.  RStudio öffnen & Einstellungen vornehmen: Unter «tools» –«global options» die **unter 1.1.** beschriebenen Einstellungen vornehmen:
+
+    <https://methodenlehre.github.io/einfuehrung-in-R/chapters/01-workflow.html>
+
+<!-- -->
+
+2.  Neues Skript öffnen & orientieren
+
+## RStudio Oberfläche
+
+Im folgenden machen wir uns vertraut mit der Oberfläche von RStudio:
+
+![](images/R_overview.png){fig-align="center"}
+
+<!-- -->
+
+a)  Skript für Code-Eingabe sowie Kommentare
+b)  Konsole für die Ausführung von Code -\> Teste einfache mathematische Operation in dieser; reproduziere diese mittels Skript
+c)  Rechts oben: Environment & History
+d)  Rechts unten: Files, Plots, Packages und Help Viewer
+
+## Pakete installieren und laden
+
+Tidyverse ist ein Meta-Paket, das mehrere Pakete umfasst[![https://www.tidyverse.org/](images/clipboard-602781303.png){width="472"}](https://www.tidyverse.org/)
+
+1.  Pakete installieren (nur 1x notwendig) -\> führe diesen Code in der Konsole aus
+
+    ```{r}
+    #| eval: false
+    #| echo: TRUE
+
+    install.packages("tidyverse")
+    ```
+
+2.  Paket laden (innerhalb des Skriptes, bei jedem Neustart von R notwendig)
+
+    ```{r}
+    #| echo: TRUE
+
+    library(tidyverse)
+    ```
+
+Tipp: Pakete regelmässig updaten mit z.B. update.packages()
+
+## Operatoren kennenlernen
+
+1.  a\. Nutze R als Taschenrechner
+
+    1.  `123+456`
+
+    2.  `144*112`
+
+    3.  `10/3`
+
+    4.  Quadriere 420
+
+    5.  Ziehe die Quadratwurzel aus 146 mit der Funktion `sqrt()`
+
+    6.  Berechne den Rest der Division 10/3 mit dem Modulo Operator: `%%`
+
+### Arithmetische Operatoren und Funktionen in R, z.B.
+
+| Zeichen | Bedeutung                   |
+|---------|-----------------------------|
+| \+      | Addition                    |
+| \-      | Substraktion                |
+| \*      | Multiplikation              |
+| /       | Division                    |
+| sqrt(x) | Quadratwurzel               |
+| abs(x)  | Betrag (absoluter Wert)     |
+| x %% y  | Modulo (x mod y) 5 %% 2 = 1 |
+| \^      | Potenz                      |
+
+## Erste Zuweisungen/Variablen definieren
+
+1.  Weise den Wert 5 der Variable `x` zu mit dem Operator `<-`
+
+2.  Weise eine beliebige Zahl der Variable `y` zu und dividiere dann `x` durch `y`. Speichere dieses Ergebnis in der Variable `z`.
+
+3.  Schaue dir das Ergebnis in deinem Environment an. Lass dir das Ergebnis auch in der Konsole ausgeben. Das Environment findest du oben rechts, die Konsole ist unter deinem Skript.
+
+4.  Erstelle zwei Variablen: Eine mit deinem Vornamen und eine mit deinem Nachnamen. Solche "character" Variablen musst du in Anführungszeichen setzen `""`
+
+5.  Kombiniere deinen Vor- und Nachnamen zu deinem vollen Namen mittels `paste` . Speichere diese Variable als `voller_name`.
+
+## Vektoren definieren
+
+1.  Definiere einen Vektor «first_vector» mit den Zahlen 100, 80, 54, 73. Einen Vektor definiert man so: `first_vector <- c(...)`
+
+2.  Wende den Befehl `boxplot()` auf deinen Vektor an
+
+3.  Berechne die Summe `sum()`und den Mittelwert `mean()` von deinem Vektor
+
+4.  Multipliziere deinen Vektor mit `*2` und schaue dir das Ergebnis an.
+
+Die wichtigsten Operatoren und Funktionen in R: <https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html>
+
+### Statistische Funktionen, die man auf Vektoren anwenden kann, z.B.
+
+| Funktion              | Bedeutung                 |
+|-----------------------|---------------------------|
+| mean(x, na.rm =FALSE) | Mittelwert                |
+| sd(x)                 | Standardabweichung        |
+| var(x)                | Varianz                   |
+| median(x)             | Median                    |
+| sum(x)                | Summe                     |
+| min(x)                | Minimalwert               |
+| max(x)                | Maximalwert               |
+| range(x)              | Minimal - und Maximalwert |
+
+## Logische Operatoren
+
+1.  Teste ob die Zahl 5 größer als 2 ist –\> TRUE or FALSE?
+
+2.  Teste ob 6 ungleich 8 ist –\> TRUE or FALSE?
+
+3.  Subtrahiere 80 von 50 und speichere das Ergebnis in einer Variable namens «diff_score».
+
+4.  Berechne mit `abs()` den absoluten Wert von «diff_score» lasse dir diesen mit `print(diff_score)` in der Konsole ausgeben.
+
+### Logische Operatoren, z.B.
+
+| Zeichen | Bedeutung      |
+|---------|----------------|
+| ==      | gleich         |
+| !=      | ungleich       |
+| \>      | grösser        |
+| \>=     | grösser gleich |
+| \<      | kleiner        |
+| \<=     | kleiner gleich |
+| \|      | Logisches Oder |
+| &       | Logisches Und  |
+
+## Nachvollziehbarkeit von Code
+
+### Kommentare
+
+Informative Kommentare im Code sind elementar für die Nachvollziehbarkeit.
+
+1.  Schreibe einen Kommentar indem du ein `#` verwendest.
+
+2.  Code der nach einem `#` steht wird nicht ausgeführt. Setze ein `#` vor eine Codezeile und führe sie aus und beobachte was passiert.
+
+### Benennung von Variablen
+
+Es gibt verschiedene Konventionen, wie man Variablen benennen kann.\
+Einige wichtige Grundsätze dafür sind:
+
+-   Namen können aus Buchstaben, Zahlen sowie den Zeichen `_` oder `.` bestehen.
+
+-   Sie müssen mit einem Buchstaben beginnen und dürfen keine Leerzeichen enthalten.
+
+-   Sonderzeichen und Großbuchstaben sollten vermieden werden.
+
+-   Keine Namen verwenden, die bereits für Funktionen reserviert sind (z. B. `mean()`).
+
+-   Der Name sollte den Inhalt der Variablen möglichst gut beschreiben → Reproduzierbarkeit; *clarity instead of brevity*.
+
+-   Am besten englische Bezeichnungen verwenden, um internationalen Standards zu folgen.
+
+👉 [Mehr dazu](https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#variablennamen)
+
+**Übung:**
+
+-   Definiere eine neue Variable nach *snake_case*.
+
+-   Definiere eine zweite Variable nach *CamelCase*.
+
+In unserem Seminar verwenden wir den *snake_case*.
+
+## Für fortgeschrittene R-Nutzer:innen
+
+1.  Speichere die beiden höchsten Werte aus «first_vector» in einer neuen Variable ab (Tipp: verwende `sort()` )
+
+2.  Erstelle einen Vektor mit Werten von 0-1000 in 10er Schritten (Tipp: suche nach der Funktion `seq()`
+
+3.  Ziehe zufällig eine Zahl aus diesem Vektor
+
+4.  Generiere einen Vektor, der aus 50 Wiederholungen der Zahl 3 besteht
+
+Tipps zu diesen Aufgaben findest du bei Bedarf hier: <https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html> (Kapitel 2.1)
+
+Tipp: Suche nach der Dokumentation der folgenden Funktionen: `sort(), seq(), sample, rep().`
+
+Die Dokumentation kannst du mittels `?Funktionsname` aufrufen.
+
+## Datentypen
+
+1.  **numeric vectors:** werden in integer (ganze Zahlen) und double (reelle Zahlen) unterteilt, z.B.
+
+    `numerical_vector <- c(1, 2.5, 4)`
+
+2.  **character vectors:** bestehen aus Zeichen, welche von Anführungszeichen umgeben werden, z.B.
+
+    `text_vector <- c("Hello", "World")`
+
+3.  **logical vectors:** Elemente dieses Typs können nur 3 Werte annehmen: TRUE, FALSE oder NA
+
+    `log_vector <- c(TRUE, FALSE, TRUE)`
+
+Vektoren müssen aus denselbsten Elementen bestehen, d.h. z.B. numeric und character können nicht gemischt werden. Vektoren werden meist mit `c()` erstellt.
+
+# Zusätzliche Übungen:
+
+ℹ️ **Hinweis:** Hilfestellungen zu den Übungen findest du [hier](https://methodenlehre.github.io/einfuehrung-in-R/chapters/02-R-language.html#datentypen).
+
+Nicht alle benötigten Funktionen sind explizit erwähnt. Nutze bei Bedarf eine Suchmaschine, um passende Befehle zu finden.
+
+**Überprüfen von Datentypen – palmerpenguins**
+
+Lade den öffentlich in R verfügbaren Datensatz *palmerpenguins* mit den folgenden Befehlen:
+
+``` r
+install.packages("palmerpenguins")   # nur einmal nötig 
+```
+
+``` r
+library(palmerpenguins) 
+my_penguins <- penguins 
+```
+
+### Datensatz inspizieren
+
+-   Wie viele Variablen (Spalten) sind enthalten?
+
+-   Wie viele Beobachtungen (Zeilen)?
+
+### Überblick über den Datensatz
+
+Nutze verschiedene Befehle und vergleiche die Ergebnisse:
+
+Verwende die Hilfefunktion `?funktionsname` um dir zeigen zu lassen welche Argumente die Funktionen benötigen.
+
+-   `head()`
+
+-   `glimpse()`
+
+-   `str()`
+
+-   `penguins`
+
+-   `summary()`
+
+👉 Was sind die Unterschiede zwischen den Befehlen?
+
+### Datentypen überprüfen
+
+-   Welchen Datentyp haben diese Variablen?
+
+    -   `island`
+
+    -   `body_mass_g`
+
+    -   `species`
+
+    Tipp: Googeln
+
+### Logisches Abfragen
+
+-   Überprüfe, ob `bill_depth_mm` ein numerischer Vektor ist.
+
+-   Gib die Antwort als logischen Wert aus (`TRUE` oder `FALSE`) und speichere sie in einer neuen Variable.
+
+-   Prüfe anschließend, ob diese neue Variable selbst ein logischer Vektor ist.
+
+# Am Ende deiner Übungen - vergiss nicht dein Skript abzuspeichern! :-)
+
+Gib diesem einem Namen, der Maschinen und Mensch-lesbar ist, siehe Kapitel 6.1.3 hier: <https://r4ds.hadley.nz/workflow-scripts>

@@ -1,0 +1,15 @@
+{
+  "hash": "715c9a37fbe8eac3fad2ddb24303bfac",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"requirements\"\n---\n\n::: {.cell}\n\n```{.r .cell-code}\n# requirements.R\n\n# Nutze das benutzerdefinierte Library-Verzeichnis, falls gesetzt\nif (!is.na(Sys.getenv(\"R_LIBS_USER\", unset = NA))) {\n  .libPaths(Sys.getenv(\"R_LIBS_USER\"))\n}\n\ninstall_if_missing <- function(pkg) {\n  if (!pkg %in% rownames(installed.packages())) {\n    install.packages(pkg, repos = \"https://cloud.r-project.org\")\n  }\n}\n\n# Liste der benötigten Pakete – hier kannst du jederzeit erweitern\npkgs <- c(\n  \"tidyverse\",\n  \"knitr\",\n  \"rmarkdown\"\n)\n\nsapply(pkgs, install_if_missing)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n$tidyverse\nNULL\n\n$knitr\nNULL\n\n$rmarkdown\nNULL\n```\n\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

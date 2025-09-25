@@ -1,0 +1,80 @@
+{
+  "about.qmd": {
+    "about.html": "d77053a8"
+  },
+  "index.qmd": {
+    "index.html": "331f8625"
+  },
+  "0_presentation.qmd": {
+    "0_presentation.html": "7120efd1"
+  },
+  "1_presentation(1).qmd": {
+    "1_presentation(1).html": "c9718f48"
+  },
+  "1_presentation.qmd": {
+    "1_presentation.html": "dec6034b"
+  },
+  "codebook.qmd": {
+    "codebook.html": "8728e75a"
+  },
+  "datenanalyseplan.qmd": {
+    "datenanalyseplan.html": "cce6afbc"
+  },
+  "endabgabe.qmd": {
+    "endabgabe.html": "332878e9"
+  },
+  "faq.qmd": {
+    "faq.html": "4617f549"
+  },
+  "front_page.qmd": {
+    "front_page.html": "20c67edf"
+  },
+  "leistungsnachweis.qmd": {
+    "leistungsnachweis.html": "acf41f50"
+  },
+  "requirements.qmd": {
+    "requirements.html": "5d40b446"
+  },
+  "rstudio.qmd": {
+    "rstudio.html": "809b251e"
+  },
+  "statistic.qmd": {
+    "statistic.html": "3ff59e5f"
+  },
+  "EH_1.qmd": {
+    "EH_1.html": "69f0d525"
+  },
+  "EH_1.knit.md": {
+    "EH_1.knit.html": "1f7a8686"
+  },
+  "hands_on_1.qmd": {
+    "hands_on_1.html": "e8e25920"
+  },
+  "Übungen.qmd": {
+    "Übungen.html": "bcd2e422"
+  },
+  "EH_2.qmd": {
+    "EH_2.html": "7a564de1"
+  },
+  "hands_on_1.knit.md": {
+    "hands_on_1.knit.html": "75e1d04c"
+  },
+  "Eh_3.qmd": {
+    "Eh_3.html": "ab66d235"
+  },
+  "loesung_1.qmd": {
+    "loesung_1.html": "5aa17163"
+  },
+  "Hands_On_2.qmd": {
+    "Hands_On_2.html": "85347203"
+  },
+  "EH_3.qmd": {
+    "EH_3.html": "f4c72d3e"
+  },
+  "hands_on_2.qmd": {
+    "hands_on_2.html": "3b1ce79d"
+  },
+  "EH_3-PSY-017376.qmd": {
+    "EH_3-PSY-017376.html": "3ea88ccd"
+  }
+}

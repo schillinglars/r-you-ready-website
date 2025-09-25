@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: 07fcedab-ee29-4b77-9578-54e0e693930d
+      url: https://r-you-ready.quarto.pub/hs2025

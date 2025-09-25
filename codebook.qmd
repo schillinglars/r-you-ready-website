@@ -1,0 +1,42 @@
+---
+title: "2 Codebook"
+format: html
+---
+
+Fragen zum Codebook
+
+::: {.callout-note}
+Unabhängig von den konkreten Fragen und Antworten gilt: Das Codebook soll es fremden Wissenschaftler:innen aus der Psychologie ermöglichen die Studie und die Datenanalyse ohne weiteren Aufwand nachvollziehen zu können. Dafür sollte vor allem anderen auf die Vollständigkeit und Genauigkeit der Angaben geachtet werden.
+:::
+
+## Sollen im Codebook alle Variablen eines Datensatzes beschrieben werden oder nur diejenigen, welche auch im Rahmen der Analyse verwendet werden?
+
+Als Grundsatz gilt: Das Codebook soll fremden Wissenschaftler:innen aus der Psychologie dabei helfen ohne weiteren Aufwand eure Arbeit zu beurteilen und ggf. zu replizieren. Für eine Replikation würde eine genaue Beschreibung der von euch in der Analyse verwendeten Variablen ausreichend. Eine allgemeine Beurteilung ist aber erst dann vollständig möglich, wenn auch alle anderen Variablen umfangreich beschrieben sind. Deswegen müssen im Codebook alle Variablen eures Datensatzes beschrieben werden, auch jene, die in der Analyse nicht weiter Beachtung finden.
+
+## Sollten unter „questionnaire“ wirklich nur Fragebögen aufgelistet werden oder kann man hier auch die Namen möglicher kognitiver Tests angeben?
+
+Bei Angaben im Codebook sollte immer gelten: Sie erklären für unbeteiligte Wissenschaftler:innen aus der Psychologie mehr als das sie Verwirrung stiften. Unter „questionnaire“ auch die Namen von ggf. angewendeten kognitiven Tests anzugeben, unterstützt die Nachvollziehbarkeit und kann daher so gemacht werden.
+
+## Wo liegt der Unterschied zwischen „description“ und „Composition of item…“?
+
+Bei „description“ geht es um eine kurze inhaltliche Beschreibung der Variable, also was für einen Zweck die Variable in der Studie einnimmt oder mit welchem Konstrukt die Variable im Zusammenhang steht. Bei „composition of item“ geht es um die mathematische Zusammensetzung der Variable (z.B. Mittelwert aus Items XYZ).
+
+## Wann sind „response_labels“ zu verwenden und wann nicht?
+
+Die Labels der Antwortmöglichkeiten direkt zu benennen ist dann wichtig, wenn diese nicht logisch erschliessbar sind. Dies ist z.B. bei einer Likert-Skala der Fall, da diese unterschiedlich streng formuliert sein kann. Selbst wenn diese im Datenanalyseplan aufgeführt werden, ist es sicherer diese auch noch mal im Codebook zu erwähnen.
+
+## Was ist mit der Spalte „dimensions“ gemeint?
+
+Unter „dimensions“ soll das Konstrukt aufgeführt werden, welches sich hinter Items eines Fragebogens verbirgt (z.B. Item XY gehört zur dimension „Extraversion“ in einem Big 5 Fragebogen).
+
+## Wie soll man vorgehen, wenn zu manchen Dimensionen der Variable weder im Paper noch in der Präregistrierung genaue Angaben zu finden sind?
+
+Für den Fall, dass zu einer Angabe genaue Informationen fehlen, gibt es zwei Möglichkeiten. Zum einen kann man „reverse Engineering“ anwenden. Manche Informationen sind nirgendwo explizit angegeben, lassen sich aber beispielsweise anhand der gegebenen Informationen schlussfolgern. Hierzu zählen beispielsweise die minimalen und maximalen Werte einer Skala, welche mit einer hohen Wahrscheinlichkeit aus den Rohdaten ablesbar sind. Hierzu kann aber auch zählen, sich zu überlegen, was logisch oder mögliche Angaben sind. Das bedeutet nicht, dass in der ursprünglichen Studie auch tatsächlich so gearbeitet wurde, gibt aber trotzdem einen guten Anhaltspunkt. Unabhängig davon, wie man vorgeht, müsste dies kenntlich gemacht werden. Nur so können andere Personen mögliche Fehler in den Schlussfolgerungen oder Annahmen finden, anhand welcher die entsprechenden Informationen ergänzt wurden.
+
+## Welche Informationen sind für das Codebook relevant? Die [Studie von Grinschgl et al. (2020)](https://link.springer.com/article/10.1007/s00426-020-01435-9) und/oder die [Präregistrierung von Grinschgl et al. (2020)](https://osf.io/zrqxu/)?
+
+Für das Ausfüllen des Codebook sind beide Quellen relevant, die [Studie von Grinschgl et al. 2020](https://link.springer.com/article/10.1007/s00426-020-01435-9) und die [Präregistrierung zu Grinschgl et al. (2020)](https://osf.io/zrqxu/).
+
+## Sollen alle Messwiederholungen im Codebook einzeln aufgeführt werden oder soll es eine einzelne Variable für die Messwiederholung im Codebook geben?
+
+Prinzipiell gilt: Das Codebook soll es aussenstehenden möglichst einfach machen, sich mit den Daten und der Analyse der Daten vertraut zu machen und diese replizieren zu können. Daher gilt: Angaben sollten vollständig sein und so exakt wie möglich. Abweichungen – wie beispielsweise Zusammenfassungen mehrerer Variablen – sind demnach nur dann möglich und sinnvoll, wenn sich die einzelnen Variablen nicht voneinander unterscheiden und dies so klarer dargestellt werden kann.

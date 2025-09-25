@@ -1,0 +1,21 @@
+{
+  "hash": "00513a5cbbce46e45da91d7101e274c1",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"\"\nAuthor: Lars Schilling\nformat:\n  revealjs:\n    css: styles/presentation_styles.css\n    footer: \"R u Ready? HS2025 | Psychologie der Digialisierung\"\n    theme: default\n    transition: slide\n    slide-number: true\n---\n\n\n\n# R u Ready? Reprodzierbare Datenaufbereitung und -analyse mit R\n\nHS 2025<br><br><br><br><br> **LV-Leitung**: Dr. Sandra Grinschgl / MSc. Aaron Friedli<br> **Tutor**: BSc. Lars Schilling<br><br><br><br><br> **1. Einheit**, 17.09.2025\n\n\n\n\n\n\n\n## Beispielhafte Chunks & Output\n\n::::: {.columns gap=\"2em\"}\n::: {.column width=\"50%\"}\n\n\n::: {.cell}\n\n```{.r .cell-code}\nprint(\"Hello world!\")\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"Hello world!\"\n```\n\n\n:::\n:::\n\n\n:::\n\n::: {.column width=\"50%\"}\n\n\n::: {.cell}\n\n```{.r .cell-code}\n2+2\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 4\n```\n\n\n:::\n:::\n\n\n:::\n:::::\n\n## Beispielhafte Formatierung\n\nDiese Präsentation verwendet Reveal.js in Quarto\n\n::: callout-warning\n## Hinweis\n\nAuf den Folien sind erst einmal nur Beispiele zu sehen, wie man mit Quarto Präsentationen einfach Code einbinden und zeigen kann.\n:::\n\n## Beispielhafter Datensatz\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nhead(mtcars)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1\n```\n\n\n:::\n:::\n\n\n\n## Beispielhafter ggplot-code und plot\n\n\n\n::: {.cell layout-align=\"center\" output-location='slide'}\n\n```{.r .cell-code  code-line-numbers=\"1-3|4-6|7-9\"}\nggplot(data = mtcars, aes(x = hp, y = mpg, color = factor(cyl))) +\n  geom_point(size = 3) +\n  labs(\n    title = \"PS vs. Verbrauch\",\n    x = \"Horsepower (hp)\",\n    y = \"Miles per Gallon (mpg)\",\n    color = \"Zylinder\"\n  ) +\n  theme_minimal()\n```\n\n::: {.cell-output-display}\n![](1_presentation-1-_files/figure-revealjs/unnamed-chunk-4-1.png){fig-align='center' width=960}\n:::\n:::\n",
+    "supporting": [
+      "1_presentation-1-_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,307 @@
+---
+title: "R u Ready? HS2025 | Psychologie der Digitalisierung - Einheit 3"
+author: Sandra Grinschgl, Aaron Friedli, Lars Schilling
+format: 
+  revealjs:
+    theme: [default, ./custom.scss]
+    transition: slide
+    slide-number: true
+    logo: presentation_files/eh1/unibe.png
+    incremental: false
+    self_contained: true
+    show-slide-number: all
+    smaller: true
+    progress: true
+    controls: true
+    embed-resources: true
+---
+
+## R u Ready? Reprodzierbare Datenaufbereitung und -analyse mit R
+
+HS 2025<br><br><br> **LV-Leitung**: Dr. Sandra Grinschgl / MSc. Aaron Friedli<br> **Tutor**: BSc. Lars Schilling<br><br><br>**3. Einheit**, 17.09.2025
+
+------------------------------------------------------------------------
+
+## Fragen zum Datenanalyseplan:
+
+![](images/EH_2_files/fragen.png)
+
+------------------------------------------------------------------------
+
+## Fragen zu den Hands On Übungen der ersten beiden Wochen?
+
+-   Hier eine sprachlich glattere Version deiner Fragen:
+
+-   Fragen zu den Hands-On-Übungen der ersten beiden Wochen?
+
+-   Was hat euch Schwierigkeiten bereitet?
+
+-   Gibt es noch Unklarheiten?
+
+-   Welche Übungen sollen wir gemeinsam live durchgehen?
+
+------------------------------------------------------------------------
+
+## Heute:
+
+<iframe src="PDFs/Syllabus.pdf" width="100%" height="600px">
+
+</iframe>
+
+------------------------------------------------------------------------
+
+## Peer-Pairings
+
+XXX
+
+------------------------------------------------------------------------
+
+## Forschungsdatenmanagement:
+
+***Planung, Organisation, Speicherung, Dokumentation und Archivierung von Daten während des gesamten Forschungsprozesses.***
+
+::::: columns
+::: {.column width="70%"}
+### *Warum Datenmanagemen*t:
+
+-   Datenflut in der Forschung Risiken ohne gutes Management
+
+### Ziele von Datenmanagement:
+
+-   Qualitätssicherung
+
+-   Sicherheit/Datenschutz & Ethik
+
+-   Reproduzierbarkeit
+
+-   Nachhaltigkeit und Transparenz
+:::
+
+::: {.column width="30%"}
+[![](images/Forschungsadatenmanagement.png)](Quellen:%20https://www.unilu.ch/forschung/open-science/forschungsdatenmanagement/)
+:::
+:::::
+
+### 
+
+------------------------------------------------------------------------
+
+## Forschungsdatenmanagement (2)
+
+::::: columns
+::: {.column width="70%"}
+### **Standards & Vorgaben:**
+
+-   Fair Prinzipien
+
+-   Data Management Plan (SNF)
+
+-   Förderorganisatornen & Journals
+
+**Praktische Umsetzung:**
+
+-   Ordnerstrukturen & Versionierung
+
+-   Dokumentation (README, Codebooks)
+
+-   Offene Dateiformate
+:::
+
+::: {.column width="30%"}
+![](images/FAIR.jpg){fig-alt="https://www.go-fair.org/fair-principles/" width="130%"}
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Ordnerstrukturen: Psych-DS
+
+-   Standard für die Organisation von Daten, Skripten und weiteren Studiendokumenten
+
+    ![](images/PsychDS.png)
+
+::: notes
+Ein Standard von vielen Möglichen
+
+<https://psychds-docs.readthedocs.io/en/latest/guides/1_getting_started/>
+:::
+
+------------------------------------------------------------------------
+
+## Psych-DS für unser Zwecke:
+
+-   Leicht Abgeändertes Format für die Abgaben.
+
+    -   Macht es leichter für uns die Abgaben zu kontrollieren
+
+-   Hilft euch eine übersichtliche Ordnerstruktur zu behalten
+
+------------------------------------------------------------------------
+
+## **Psych-DS: Wichtigste Grundsätze**
+
+-   Datenfiles nur in "data".
+
+    -   Die Rohdatenfiles werden nicht bearbeitet!
+
+    -   Der aufbereitete Datensatz -\> data/processed
+
+-   Codebook in Ordner "data"
+
+-   Datenanalyseplan in "preregistration"
+
+-   Skripte in "code"
+
+    -   Aufbereitungsschritte im Skript "proocessing"
+
+    -   Analyse (mit dem processed datensatz) im Skript "analysis"
+
+-   Keine redundanten Files!
+
+------------------------------------------------------------------------
+
+## Wiederholung: Bennenung von Variablen ect. in R
+
+-   Namen können aus Buchstaben, Zahlen und Zeichen (\_ oder .) bestehen
+
+-   Er muss mit Buchstaben begonnen werden und darf keine Leerzeichen beinhalten
+
+-   Sonderzeichen und Großbuchstaben sollten vermieden werden Keine Namen verwenden, die schon an Funktionen vergeben sind (z.B. mean())
+
+-   Empfehlung für einen leserlichen Code: snake_case
+
+-   Name soll Variable inhaltlich bestmöglich beschreiben
+
+-   Reproduzierbarkeit; „clarity instead of brevity“
+
+-   Benennung am besten in Englisch um internationalen Standards zu folgen
+
+-   Kommentierung von R-Code mit \#
+
+    -   Text nach \# wird ignoriert (für 1 Zeile)
+
+    -   Neue Zeilen müssen wieder mit \# beginnen
+
+------------------------------------------------------------------------
+
+## Codebook
+
+-   Naiver Personen sollen Datensatz nachvollziehen können (Reproduzierbarkeit & Zusatzanalysen)
+
+-   Beinhaltet eine Liste und Beschreibung aller Variablen
+
+    -   Wie wurde die Variable erhoben (z.B. aus welchem Fragebogen)?
+
+    -   Wie wurde die Variable berechnet (z.B. Summenscore, Mittelwert)?
+
+    -   Welche Werte kann die Variable annehmen (Minimum und Maximum)?
+
+------------------------------------------------------------------------
+
+## Wichtige Grunsätze für das Codebook
+
+-   Am besten für Rohdaten als auch weiter-verarbeitete Daten
+
+<!-- -->
+
+-   Variablennamen in Codebook sollen identisch zu Variablennamen in Datensatz sein
+
+-   Variable muss ausführlich genug beschrieben sein, sodass andere Personen es nachvollziehen können
+
+## Codebook: Vorlage
+
+-   Kann in verschiedenen Formaten erstellt werden (Word, Excel, ect.)
+
+-   Excel-Vorlage für das Seminar (siehe ILIAS - Abschlussprojekt - Codebook)
+
+-   Beispiel: "Example_Codebook" - Ordner
+
+-   Für weitere Anleitungen siehe "Guideline_Codebook".
+
+Siehe auch: Pennington (2023)
+
+------------------------------------------------------------------------
+
+## Reproduzierbare Auwertung: Grundsätze
+
+-   Digitale Rohdaten
+
+-   Skript soll den gesamten Weg von den Rohdaten bis hin zu den Ergebnissen dokumentieren
+
+-   Wenn man euren Code auf den Rohdaten laufen lässt, sollte man (fehlerfrei) zu den Ergebnissen kommen
+
+-   Skript ist kommentiert und sinnvoll gegliedert
+
+------------------------------------------------------------------------
+
+## Rohdaten für Grinschgl et al. 2020
+
+-   Bereits vorhanden in euren Ordnern (r_you_ready)
+
+-   Wir mergen diese heute oder in EH4 zu einem vollständigen Datensatz –\> **dat_full**
+
+    ![](images/EH3/Rohdaten.png){width="145"}
+
+------------------------------------------------------------------------
+
+## Codebook
+
+-   Notwendig für „gemergten“ Datensatz „dat_full“
+
+-   Vorlage ist auf Englisch, kann aber auch auf Deutsch ausgefüllt werden (selbes gilt für Datenanalyseplan)
+
+-   Basierend auf Horstmann et al. (2020)
+
+-   Abgabe bis EH6 über ILIAS
+
+-   Danach Peer Feedback
+
+------------------------------------------------------------------------
+
+### Beispiel Codebook BFI
+
+-   XXX Live Zeigen? @Sandra?
+
+-   Schritte – Import BFI Datenset, EInige Variablen Live eintragen?
+
+-   
+
+------------------------------------------------------------------------
+
+## Hands on!
+
+-   Projekte
+
+-   Daten einlesen
+
+-   Daten speichern
+
+-   
+
+------------------------------------------------------------------------
+
+## Heute haben wir...
+
+... Uns mit den Grundlagen von Forschungsdatenmanagement beschäftigt
+
+... PsychDS als einen Standard kennengelernt
+
+…Style-Empfehlungen für R Code besprochen
+
+…die Gründe für und den Aufbau von einem Codebook besprochen
+
+…Datensätze in R importiert
+
+…diese gemerged und exportiert
+
+------------------------------------------------------------------------
+
+## Hausübungen
+
+-   Codebook erstellen bis **Mi 22.10.2025**
+
+------------------------------------------------------------------------
+
+## Literatur:
+
+## 

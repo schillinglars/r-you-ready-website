@@ -1,0 +1,52 @@
+project:
+  type: website
+
+website:
+  title: "R u Ready"
+  sidebar:
+    style: floating
+    search: true
+    contents:
+      - href: front_page.qmd
+        text: "Einleitung"
+      - href: 0_presentation.qmd
+        text: "Präsentationen"
+        contents:
+          - href: EH_1.qmd
+            text: "Einheit 1 - 17.09.2025"
+          - href: EH_2.qmd
+            text: "Einheit 2 - 24.09.2025"
+      - href: Übungen.qmd
+        text: "Übungen zu den Einheiten"
+        contents: 
+          href: hands_on_1.qmd
+          text: "Hands on - Block 1"
+      - href: faq.qmd
+        text: "FAQ"
+        contents:
+          - href: rstudio.qmd
+            text: "1  RStudio"
+          - href: codebook.qmd
+            text: "2  Codebook"
+          - href: datenanalyseplan.qmd
+            text: "3  Datenanalyseplan"
+          - href: statistic.qmd
+            text: "4  Statistik"
+          - href: endabgabe.qmd
+            text: "5  Abschlussprojekt"
+      - href: leistungsnachweis.qmd
+        text: "Leistungsnachweis"
+      - href: about.qmd
+        text: "About"
+  page-navigation: true
+  page-footer: |
+    Der Inhalt dieser Website ist lizenziert unter  <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1">CC BY-SA 4.0</a>  © 2025
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-location: right
+    toc-title: "Inhaltsverzeichnis"
+    number-sections: true
+    css: styles/website_styles.css

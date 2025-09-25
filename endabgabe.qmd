@@ -1,0 +1,40 @@
+---
+title: "5 Abschlussprojekt"
+format: html
+---
+
+::: callout-note
+Lies dir neben den folgenden Fragen auch noch mal die allgemeinen Infos zum Abschlussprojekt unter "[Leistungsnachweis](https://r-you-ready.quarto.pub/leistungsnachweis.html)" durch.
+:::
+
+## Was gibt es für Formatvorgaben für das Skript (Schriftgrösse, Fettmarkierungen etc.)?
+
+Es gibt keine exakten Formatvorgaben für das Skript. Vielmehr gilt: Das Skript sollte übersichtlich sein und keine ungewöhnlichen Formatierungen enthalten. Mit den Vorgaben von [APA 7](https://apastyle.apa.org/style-grammar-guidelines/paper-format/sample-papers) ist das Skript sicher passend formatiert.
+
+## Welche Stilvorgaben gibt es bei der Erstellung des Skripts zu beachten?
+
+Das Skript sollte sinnvolle Überschriften und eine sinnvolle Gliederung enthalten. Der Code sollte kommentiert sein, so dass die Auswahl von Funktionen und das Vorgehen begründet sind. Sofern LLMs oder andere externe Tools zur Hilfe herangezogen worden sind, muss dies angemerkt werden. Hierfür kann ggf. eine getrennte Kopie des Chatverlaufes eingereicht oder ein Link nach [APA-Guidelines](https://apastyle.apa.org/style-grammar-guidelines/references/examples) ergänzt werden.
+
+## In welcher Sprache, Zeitform, Perspektive und in welchem Stil soll der Datenanalyseplan geschrieben werden?
+
+Alle für die Abgabe relevanten Unterlagen dürfen auf Englisch oder Deutsch eingereicht werden. Wichtig ist lediglich, dass die Unterlagen untereinander einer einheitlichen Sprache folgen. Als Zeitform gilt das Präsens. Bitte schreibe in der Wir-Form und im wissenschaftlichen Stil.
+
+## Wie umfangreich sollen die Kommentare des Codes im Skript sein?
+
+Die Funktionsweise von üblicher Syntax (wie beispielsweise dem Pipe Operator) oder einer Funktion muss nicht kommentiert werden. Aber: Das Dokument muss für fremde Wissenschaftler:innen der Psychologie ohne weiteres nachvollziehbar sein. Bedeutet, Kommentare sollten das Vorgehen im Skript ausreichend begründen.
+
+## Sollen im Skript Warn- und/oder Fehlermeldungen unterbunden werden oder sichtbar sein?
+
+Damit wir die Abgabe leichter kontrollieren können sollen die Warn- und Fehlermeldungen bitte **sichtbar** sein und **nicht ausgeschaltet** sein. Auch unabhängig von der Abgabe ist zu empfehlen die Meldungen sichtbar zu lassen. Das erleichtert Unbeteiligten die Analyse nachzuvollziehen und sie auf mögliche Fehler zu untersuchen.
+
+## Darf im Skript auch noch Code von Übungsaufgaben vorhanden sein?
+
+Hier gilt der Grundsatz: Euer Skript, wie auch alle anderen Unterlagen, sollten für fremde Wissenschaftler:innen der Psychologie ohne weiteres nachvollziehbar sein. Code, welcher nicht im Zusammenhang mit der Endabgabe steht - und dementsprechend auch nicht im Datenanalyseplan erwähnt wird – würde nur vom wesentlichen Ablenken und soll daher nicht im Skript vorhanden sein.
+
+## Wie exakt sollen die Tabellen und Abbildungen denen aus dem Paper von [Grinschgl et al. (2020)](https://link.springer.com/article/10.1007/s00426-020-01435-9) entsprechen?
+
+Die Tabellen und Abbildungen aus dem Originalpaper von [Grinschgl et al. (2020)](https://link.springer.com/article/10.1007/s00426-020-01435-9) müssen nicht exakt repliziert werden. Wichtig ist allerdings, dass die Aussage der Abbildung bzw. der Tabelle korrekt ist und keine wichtigen Details ausgelassen werden.
+
+## Soll die Berechnung von Cronbachs Alpha aus dem Paper von [Grinschgl et al. (2020)](https://link.springer.com/article/10.1007/s00426-020-01435-9) auch durchgeführt werden?
+
+Nein, die Berechnung von Cronbachs-Alpha aus dem Paper von [Grinschgl et al. (2020)](https://link.springer.com/article/10.1007/s00426-020-01435-9) ist nicht Teil des Abschlussprojekts.

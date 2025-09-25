@@ -1,0 +1,26 @@
+---
+title: "3 Datenanalyseplan"
+format: html
+---
+
+Fragen zum Datenanalyseplan
+
+::: callout-important
+Unabhängig von den konkreten Fragen und Antworten gilt: Der Datenanalyseplan soll es fremden Wissenschaftler:innen aus der Psychologie ermöglichen die Studie und die Datenanalyse ohne weiteren Aufwand nachvollziehen zu können. Dafür sollte vor allem anderen auf die Vollständigkeit und Genauigkeit der Angaben geachtet werden.
+:::
+
+## Müssen die Anmerkungen im Datenanalyseplan nach der Bearbeitung gelöscht werden, so dass nur die Frage und der Titel verbleiben?
+
+Üblicherweise werden Datenanalysepläne auf OSF (dem Open Science Framework) mitsamt den Anmerkungen veröffentlicht. Für das Seminar ist es möglich die Anmerkungen zu behalten oder zu löschen.
+
+## Müssen auch zu explorativen Fragestellungen Hypothesen aufgestellt werden?
+
+Kurzgesagt, nein. Bei explorativen Fragestellungen kann man auch einfach anmerken, dass diese explorativ sind – es also keine bisherige Theorie oder Evidenz für einen bestimmte Richtung gibt. Wichtig ist hierbei vor allem, transparent und vorausschauend zu arbeiten, in diesem Fall also den Umstand, explorativ zu arbeiten, klar zu benennen.
+
+## Wenn Voraussetzungsprüfungen oder post-hoc Tests durchgeführt werden, müssen diese auch im Datenanalyseplan ergänzt werden?
+
+Grundsätzlich gilt: Der Datenanalyseplan soll fremden Wissenschaftler:innen aus der Psychologie ermöglichen die Studie und die Datenanalyse ohne weiteren Aufwand nachvollziehen zu können. Dafür sollte auf Vollständigkeit und Genauigkeit geachtet werden. Dementsprechend gilt es, die Voraussetzungsprüfungen entweder komplett wegzulassen oder sie sowohl im Skript als auch im Datenanalyseplan zu ergänzen.
+
+## Soll der Abstract bereits die Resultate von [Grinschgl et al. (2020)](https://link.springer.com/article/10.1007/s00426-020-01435-9) erwähnen oder offenlassen, welche Resultate zu erwarten sind?
+
+Üblicherweise lässt der Datenanalyseplan die Resultate der beschriebenen Analyse im Abstract noch offen, da diese zu dem Zeitpunkt, zu welchem der Datenanalyseplan erstellt wird, noch nicht bekannt sind. Bei einer Replikation der Originalstudie – wie es hier der Fall ist – können die Ergebnisse aus dieser aber auch bereits genannt werden. Bezüglich der eigenen Datenanalyse sollte wiederum von *erwarteten* Ergebnissen ausgehen. Da die Analyse der Daten erst nach Verfassen des Datenanalyseplans folgt sind die Resultate bis dahin nicht bekannt.
